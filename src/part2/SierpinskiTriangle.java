@@ -22,7 +22,8 @@ public class SierpinskiTriangle {
 	}
    
 	public void sierpinski(Point2D.Double a, Point2D.Double b, Point2D.Double c, int n) {
-	   // TODO: implement
+		drawTriangle(a,b,c,StdDraw.YELLOW);
+
     }
    
 	public void drawTriangle(Point2D.Double a, Point2D.Double b, Point2D.Double c, Color color) {
