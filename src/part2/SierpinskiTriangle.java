@@ -42,12 +42,12 @@ public class SierpinskiTriangle {
 	}
 
 	public void draw(int n) {
-		drawTriangle(top, right, left,  Color.BLUE);
+		drawTriangle(top, right, left,  Color.BLACK);
 		sierpinski(this.top, this.right, this.left, n-1);
 	}
 
 	public static void main(String[] args) {
 		SierpinskiTriangle triangle = new SierpinskiTriangle();
-		triangle.draw(8);
+		triangle.draw(5);
 	}
 }
