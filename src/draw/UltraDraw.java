@@ -1650,7 +1650,7 @@ public final class UltraDraw implements ActionListener, MouseListener, MouseMoti
     }
     
     public static void addKeyListener(KeyListener kl) {
-    	draw.addKeyListener(kl);
+    	frame.addKeyListener(kl);
     }
 
     /**

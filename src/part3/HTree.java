@@ -1,9 +1,12 @@
 package part3;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.geom.Point2D;
-import draw.StdDraw;
+import draw.UltraDraw;
 
 
-public class HTree {
+public class HTree implements KeyListener {
+	public static int recursion = 0;
 	public Point2D.Double center;
 	public H start;
 	
@@ -15,11 +18,13 @@ public class HTree {
 
 	
 	public HTree() {
+		UltraDraw.addKeyListener(this);
+		
 		center = new Point2D.Double(75, 75);
 		start = new H(center, 50);
-		StdDraw.setXscale(0, 150);
-		StdDraw.setYscale(0, 150);
-		StdDraw.clear(StdDraw.GREEN);
+		UltraDraw.setXscale(0, 150);
+		UltraDraw.setYscale(0, 150);
+		UltraDraw.clear(UltraDraw.GREEN);
 	}
 	
 	public void draw(int n, H focus) {
@@ -38,6 +43,33 @@ public class HTree {
 		H bottomRight = new H(init.getBottomRight(), init.getSize() / 2);
 		H[] Val = {bottomLeft, topLeft, bottomRight, topRight};
 		return Val;
+	}
+
+
+	@Override
+	public void keyPressed(KeyEvent arg0) {
+		UltraDraw.clear(UltraDraw.WHITE);
+		System.out.println(getKeyChar());
+		String str = sting.valueof(getKeyChar());
+		int n = intager.parseint(str);
+		drawH(n);
+	
+		
+		
+	}
+
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		
+			
+		}
+		
+	
+	@Override
+	public void keyTyped(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }

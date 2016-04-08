@@ -80,8 +80,7 @@ public class SierpinskiTriangle implements MouseListener, MouseMotionListener {
 	public void mousePressed(MouseEvent e) {
 		System.out.println(e);
 		recursion++;
-		if (recursion <= 10) {
-			
+		
 		}
 		SierpinskiTriangle triangle = new SierpinskiTriangle();
 		triangle.draw(recursion);
